@@ -1,0 +1,4 @@
+<div class="draw-buttons">
+    <button [ngClass]="{'selected': selectedDrawType === 'Point'}" (click)="drawPointSelected()">Point</button>
+    <button [ngClass]="{'selected': selectedDrawType === 'Polygon'}" (click)="drawPolygonSelected()">Polygon</button>
+</div>

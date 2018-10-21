@@ -1,0 +1,9 @@
+.draw-buttons {
+    position: absolute;
+    top: 200px;
+    left: 15px;
+
+    .selected {
+        background-color: steelblue;
+    }
+}
