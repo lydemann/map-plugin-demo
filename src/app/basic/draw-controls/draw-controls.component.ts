@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MapComponent, SourceVectorComponent } from 'ngx-openlayers';
 import { geom, interaction } from 'openlayers';
 
@@ -7,7 +7,7 @@ import { geom, interaction } from 'openlayers';
   templateUrl: './draw-controls.component.html',
   styleUrls: ['./draw-controls.component.scss'],
 })
-export class DrawControlsComponent implements OnInit {
+export class DrawControlsComponent implements OnInit, OnDestroy {
 
   drawInteraction: interaction.Draw;
   selectedDrawType: 'Point' | 'Polygon';
@@ -16,6 +16,10 @@ export class DrawControlsComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy(): void {
+    this.removeDrawInteraction();
   }
 
   drawPointSelected() {
