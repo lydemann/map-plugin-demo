@@ -1,0 +1,20 @@
+<aol-map [width]="'100%'" [height]="'100%'">
+  <aol-control-defaults></aol-control-defaults>
+  <aol-control-fullscreen></aol-control-fullscreen>
+  <aol-interaction-default></aol-interaction-default>
+
+  <aol-view [zoom]="zoom">
+    <aol-coordinate [x]="5" [y]="45" [srid]="'EPSG:4326'"></aol-coordinate>
+  </aol-view>
+  <aol-layer-tile [opacity]="opacity">
+    <aol-source-osm></aol-source-osm>
+  </aol-layer-tile>
+  <aol-layer-vector [opacity]="opacity">
+    <aol-source-vector>
+      <router-outlet></router-outlet>
+    </aol-source-vector>
+  </aol-layer-vector>
+</aol-map>
+
+<span>opacity:</span><button (click)="increaseOpacity()">+</button><button (click)="decreaseOpacity()">-</button><br>
+<span>zoom:</span><button (click)="increaseZoom()">+</button><button (click)="decreaseZoom()">-</button><br>

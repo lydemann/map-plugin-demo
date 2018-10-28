@@ -4,18 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AngularOpenlayersModule } from 'ngx-openlayers';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
-import { BasicComponent } from './basic/basic.component';
-import { DrawControlsComponent } from './basic/draw-controls/draw-controls.component';
-import { ClusterComponent } from './cluster/cluster.component';
-import { RasterComponent } from './raster/raster.component';
+import { DrawControlsComponent } from './map/map-features/draw-controls/draw-controls.component';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BasicComponent,
-    ClusterComponent,
-    RasterComponent,
+    MapComponent,
     DrawControlsComponent
   ],
   imports: [
