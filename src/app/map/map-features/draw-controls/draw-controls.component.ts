@@ -1,7 +1,3 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MapComponent, SourceVectorComponent } from 'ngx-openlayers';
-import { geom, interaction } from 'openlayers';
-
 @Component({
   selector: 'app-draw-controls',
   templateUrl: './draw-controls.component.html',
